@@ -1,0 +1,47 @@
+/* Имеется прямоугольное отверстие размерами a и b, определить,
+можно ли его полностью закрыть круглой картонкой радиусом r.*/
+public class HelloWorld {
+    public static void main(String[] args) {
+        Rectangle rectangle = new Rectangle(3, 3);
+        Circle circle = new Circle(1);
+
+        if (circle.getDiagonal() == rectangle.getDiagonal()){
+            System.out.println("круг закрыл");
+        }else{
+            System.out.println("круг не закрыл");
+        }
+    }
+    }
+
+    abstract class Shape{
+    public abstract int getDiagonal();
+    }
+
+    class Rectangle extends Shape{
+    private int a, b;
+    public Rectangle(){
+        a=0;
+        b=0;
+    }
+    public Rectangle(int a, int b) {
+        this.a = a;
+        this.b = b;
+    }
+    public int getDiagonal() {
+        return (int) Math.sqrt(a^2 * b^2);
+    }
+    }
+class Circle extends Shape {
+    private int radius;
+
+    public Circle() {
+        radius = 0;
+    }
+
+    public Circle(int radius) {
+        this.radius = radius;
+    }
+    public int getDiagonal() {
+        return 2 * radius;
+    }
+}
