@@ -1,0 +1,12 @@
+public class TaskMoney {
+    public static void main(String[] args) {
+       int sum = 102;
+       if (sum ==1 || sum %10==1 || sum %100==1) {
+           System.out.print (sum + " рубль.");
+       }else if (sum ==2 || sum %10==2 || sum %100==2 || sum ==3 || sum %10==3 || sum %100==3 || sum ==4 || sum %10==4 || sum %100==4 && sum < 10){
+           System.out.print (sum  + " рубля.");
+       } else if (sum ==5 || sum %10==5 || sum %100==5 || sum ==6 || sum %10==6 || sum %100==6 || sum ==7 || sum %10==7 || sum %100==7  || sum ==8 || sum %10==8 || sum %100==8 || sum ==9 || sum %10==9 || sum %100==9 ) {
+            System.out.print (sum  + " рублей.");
+    }
+    }
+}
