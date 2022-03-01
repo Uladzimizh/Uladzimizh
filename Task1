@@ -1,12 +1,32 @@
 public class TaskMoney {
-    public static void main(String[] args) {
-       int sum = 102;
-       if (sum ==1 || sum %10==1 || sum %100==1) {
-           System.out.print (sum + " рубль.");
-       }else if (sum ==2 || sum %10==2 || sum %100==2 || sum ==3 || sum %10==3 || sum %100==3 || sum ==4 || sum %10==4 || sum %100==4 && sum < 10){
-           System.out.print (sum  + " рубля.");
-       } else if (sum ==5 || sum %10==5 || sum %100==5 || sum ==6 || sum %10==6 || sum %100==6 || sum ==7 || sum %10==7 || sum %100==7  || sum ==8 || sum %10==8 || sum %100==8 || sum ==9 || sum %10==9 || sum %100==9 ) {
-            System.out.print (sum  + " рублей.");
-    }
+     public static void main(String[] args) {
+        String str = null;
+        int sum = 114;
+        int money;
+        if (sum % 100 > 9 && sum % 100 < 21) {
+            money = 5;
+        } else {
+            money = sum % 10;
+        }
+
+        switch (money) {
+            case 1:
+                str = "рубль";
+                break;
+            case 2:
+            case 3:
+            case 4:
+                str = "рубля";
+                break;
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 0:
+                str = "рублей";
+                break;
+        }
+        System.out.printf("%,d %s%n", sum, str);
     }
 }
